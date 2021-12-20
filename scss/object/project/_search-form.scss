@@ -1,0 +1,33 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-search-form {
+   width: 35%;
+   height: 21%;
+   position: relative;       /* 基準値とする */
+   margin-right: 2%;
+   display: flex;
+   justify-content: space-between;
+   @include m.mq( tablet ) {
+      width: 65.5%;
+   }
+   &::before {
+      content: "";
+      width: 23px;           /* アイコンの横幅 */
+      height: 23px;          /* アイコンの高さ */
+      background: url(../../../img/search-icon.png) no-repeat center center / auto 100%; /* 背景にアイコン画像を配置 */
+      display: inline-block; /* 高さを持たせるためにインラインブロック要素にする */
+      position: absolute;    /* 相対位置に指定 */
+      top: 50%;              /* アイコンの位置 */
+      transform: translateY(-50%);
+      left: 8px;
+   }
+   &__input {
+      padding: 3px 0 3px 2.5em; /* アイコンを設置するため左の余白を多めに指定 */
+      width: 72.6%;
+   }
+   &__button {
+      width: 25%;
+      background-image: linear-gradient(0deg, #DED8D3, #F2EDE9); /* グラデーション */
+   }
+}

@@ -1,0 +1,187 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-article {
+    font-family: v.$font-Mplus-j-Regular;
+    font-size: 12.5px;
+    color: v.$font-color--brown;
+    &__container {
+        @include m.mq( tablet ) {
+            width: 85.6%;
+            padding: 47px 0;
+        }
+        @include m.mq( sp ) {
+            padding: 23.5px 0;
+        }
+    }
+    h2,h3,h4,h5,h6 {
+        font-family: v.$font-Mplus-j-Bold;
+        margin-bottom: 47px;
+        @include m.mq( sp ) {
+            margin-bottom: 23.5px;
+        }
+    }
+    h2 {
+        font-size: 28px;
+        @include m.mq( sp ) {
+            font-size: 22px;
+        }
+    }
+    h3 {
+        font-size: 22px;
+        @include m.mq( sp ) {
+            font-size: 19px;
+        }
+    }
+    h4,h5,h6 {
+        font-size: 15.7px;
+    }
+    p {
+        margin-bottom: 47px;
+        @include m.mq( sp ) {
+            margin-bottom: 23.5px;
+        }
+        &.text-right {
+            margin-left: 3%;
+            margin-bottom: 0;
+        }
+        &.text-left {
+            margin-right: 3%;
+            margin-bottom: 0;
+        }
+    }
+    a {
+        text-decoration: underline;
+        color: v.$font-color--bluegray;
+    }
+    blockquote {
+        background-color: v.$bgcolor--block;
+        padding: 39px;
+        margin-bottom: 47px;
+        @include m.mq( sp ) {
+            padding: 23.5px 15.7px;
+            margin-bottom: 23.5px;
+        }
+    }
+    img {
+        margin-bottom: 47px;
+        @include m.mq( sp ) {
+            margin-bottom: 23.5px;
+        }
+        &.big {
+            max-width: 100%;
+        }
+        &.medium {
+            object-fit: contain;
+            width: 43%;
+            &.center {
+                @include m.mq( tablet ) {
+                    width: 80%;
+                }
+            }
+        }
+        &.small {
+            object-fit: contain;
+            width: calc(97% / 3);  /* 余白分を100%から引いてから画像数で割る */
+            @include m.mq( tablet ) {
+                width: calc(98.5% / 2);
+            }
+            @include m.mq( sp ) {
+                width: 100%;
+            }
+        }
+    }
+    div {
+        margin-bottom: 47px;
+        @include m.mq( sp ) {
+            margin-bottom: 23.5px;
+        }
+        &.flex-row {
+            display: flex;
+            align-items: flex-start;
+            img {
+                margin-bottom: 0;
+            }
+        }
+        &.flex-wrap {
+            flex-wrap: wrap;
+            column-gap: 1.5%;
+            row-gap: 15.7px;
+        }
+    }
+    ol,ul {
+        margin-bottom: 15.7px;
+        &.decimal {
+            list-style-type: decimal;
+        }
+        &.first {
+            list-style-position: inside;
+            padding-left: 39px;
+            @include m.mq( sp ) {
+                padding-left: 0;
+            }
+        }
+        &.second {
+            list-style-position: inside;
+            padding-left: 55px;
+            @include m.mq( sp ) {
+                padding-left: 16px;
+            }
+        }
+    }
+    code {
+        display: inline-block;
+        width: 100%;
+        font-family: v.$font-Mplus-Regular;
+        background-color: v.$bgcolor--block;
+        padding: 39px;
+        margin-bottom: 47px;
+        @include m.mq( sp ) {
+            margin-bottom: 23.5px;
+        }
+    }
+    pre {
+        font-family: v.$font-Mplus-Regular;
+    }
+    table,
+    td {
+        border-collapse: collapse;
+        border: 1px solid v.$font-color--gray;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 47px;
+        @include m.mq( sp ) {
+            margin-bottom: 23.5px;
+        }
+    }
+    td {
+        height: 60px;
+        padding-left: 23.5px;
+        &.td_left {
+            width: 32%;
+        }
+        &.td_right {
+            width: 68%;
+        }
+    }
+    .center {
+        margin: 0 auto 47px;
+        @include m.mq( sp ) {
+            margin: 0 auto 23.5px;
+        }
+    }
+    &__button {
+        width: 336px;
+        height: 81.5px;
+        border-radius: 1.3em;
+        background-image: linear-gradient(0deg, #DED8D3, #F2EDE9);
+        font-family: v.$font-Mplus-j-Bold;
+        margin-bottom: 47px;
+        @include m.mq( sp ) {
+            margin-bottom: 23.5px;
+            max-width: 100%;
+            height: 63.5px;
+        }
+    }
+}

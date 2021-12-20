@@ -1,0 +1,46 @@
+@use "../foundation/mixin" as m;
+
+.l-grid {
+    display: grid;
+    grid-template-rows: 170px 1fr 118px;
+    grid-template-columns: 1fr 19%;
+    grid-template-areas:
+        "header sidebar"
+        "contents sidebar"
+        "footer footer";
+    &__item1 {
+        grid-area: header;
+    }
+    &__item2 {
+        grid-area: contents;
+    }
+    &__item3 {
+        grid-area: sidebar;
+        @include m.mq( tablet ) {
+            position: fixed;
+            z-index: 200;
+            top: 0;
+            right: -100%;
+            transition: all .6s;
+            &.open {
+                transform: translateX(-44vw);
+                z-index: 200; 
+                height: 100vh;
+                overflow: auto; // サイドバーの縦スクロール
+                @include m.mq( sp ) {
+                    transform: translateX(-87vw);
+                }
+            }
+        }
+    }
+    &__item4 {
+        grid-area: footer;
+    }
+    @include m.mq( tablet ) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "contents"
+            "footer";
+    }
+}

@@ -1,0 +1,24 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-mainvisual {
+    height: 415px;
+    width: 100%;
+    background-image: url(../../../img/mainvisual-pc.jpg);
+    display: flex;
+    align-items: center; 
+    @include m.mq( tablet ) {
+        height: 230px;
+    }
+    &__title {
+        color: v.$font-color--white;
+        font-size: 31px;
+        padding-left: 67.4px;
+        @include m.mq( tablet ) {
+            font-size: 28px;
+        }
+        @include m.mq( sp ) {
+            padding-left: 20px;
+        }
+    }
+}

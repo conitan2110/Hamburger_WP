@@ -1,0 +1,19 @@
+@use "../foundation/variable" as v;
+
+body {
+    background-color: v.$bgcolor--contents;
+    &.fixed {
+        overflow: hidden;
+    }
+}
+h5,h6 {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+ol,ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
