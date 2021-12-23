@@ -4,7 +4,7 @@
 .p-mainvisual {
     height: 415px;
     width: 100%;
-    background-image: url(../../../img/mainvisual-pc.jpg);
+    background-image: url(../img/mainvisual-pc.jpg);
     display: flex;
     align-items: center; 
     @include m.mq( tablet ) {

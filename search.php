@@ -28,7 +28,8 @@
 
             <!-- menu-list -->
             <section class="p-menu-list">
-                <div class="p-menu-card c-card">
+                <?php get_template_part( 'menu-card' ); ?>
+                <!-- <div class="p-menu-card c-card">
                     <img src="img/menu-thumbnail.jpg" alt="商品サムネイル" class="p-menu-card__thumbnail c-card__thumbnail">
                     <div class="p-menu-card__contents c-card__contents">
                         <h2 class="p-menu-card__title c-card__title">チーズバーガー</h2>
@@ -92,7 +93,7 @@
                         <p class="p-menu-card__button c-card__button">詳しく見る</p>
                         <a href="#" class="c-card__link"></a>
                     </div>
-                </div>
+                </div> -->
             </section><!-- ここまでmenu-list -->
         </div><!-- ここまでcontainer -->
 

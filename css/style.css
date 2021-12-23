@@ -453,7 +453,7 @@ ol, ul {
 .p-footer {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../../../img/footer-bg-pc.jpg);
+  background-image: url(../img/footer-bg-pc.jpg);
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -514,7 +514,7 @@ ol, ul {
   /* アイコンの横幅 */
   height: 23px;
   /* アイコンの高さ */
-  background: url(../../../img/search-icon.png) no-repeat center center/auto 100%;
+  background: url(../img/search-icon.png) no-repeat center center/auto 100%;
   /* 背景にアイコン画像を配置 */
   display: inline-block;
   /* 高さを持たせるためにインラインブロック要素にする */
@@ -524,7 +524,7 @@ ol, ul {
   /* アイコンの位置 */
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 8px;
+  left: 12px;
 }
 .p-search-form__input {
   padding: 3px 0 3px 2.5em;
@@ -541,7 +541,7 @@ ol, ul {
 .p-mainvisual {
   height: 415px;
   width: 100%;
-  background-image: url(../../../img/mainvisual-pc.jpg);
+  background-image: url(../img/mainvisual-pc.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -573,12 +573,12 @@ ol, ul {
 .p-page-title {
   height: 187px;
   width: 100%;
-  background-image: url(../../../img/archive-title-pc.jpg);
+  background-image: url(../img/archive-title-pc.jpg);
 }
 @media (max-width: 834px) {
   .p-page-title {
     height: 222px;
-    background-image: url(../../../img/archive-title-ipad.jpg);
+    background-image: url(../img/archive-title-ipad.jpg);
   }
 }
 @media (max-width: 640px) {
@@ -636,11 +636,11 @@ ol, ul {
 }
 
 .p-single-titlevisual {
-  background-image: url(../../../img/single-title-pc.jpg);
+  background-image: url(../img/single-title-pc.jpg);
 }
 
 .p-page-titlevisual {
-  background-image: url(../../../img/page-title-pc.jpg);
+  background-image: url(../img/page-title-pc.jpg);
 }
 
 .p-info {
@@ -962,10 +962,10 @@ ol, ul {
   }
 }
 .p-food-menu__li:first-child {
-  background-image: url(../../../img/takeout-pc.jpg);
+  background-image: url(../img/takeout-pc.jpg);
 }
 .p-food-menu__li:nth-child(2) {
-  background-image: url(../../../img/eatin-pc.jpg);
+  background-image: url(../img/eatin-pc.jpg);
   margin-left: 5.15%;
 }
 @media (max-width: 834px) {
@@ -1039,7 +1039,7 @@ ol, ul {
 
 .p-access {
   width: 100%;
-  background-image: url(../../../img/map.jpg);
+  background-image: url(../img/map.jpg);
   background-position: 0 50%;
 }
 .p-access__map-layer {

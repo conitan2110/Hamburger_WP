@@ -34,10 +34,10 @@
             width: 89%;
         }
         &:first-child {
-            background-image: url(../../../img/takeout-pc.jpg);
+            background-image: url(../img/takeout-pc.jpg);
         }
         &:nth-child(2) {
-            background-image: url(../../../img/eatin-pc.jpg);
+            background-image: url(../img/eatin-pc.jpg);
             margin-left: 5.15%;
             @include m.mq( tablet ) {
                 margin-left: 4.8%;
@@ -95,4 +95,4 @@
             font-size: 11px;
         }
     }
- }
+}

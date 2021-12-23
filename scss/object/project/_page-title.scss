@@ -4,10 +4,10 @@
 .p-page-title {
     height: 187px;
     width: 100%;
-    background-image: url(../../../img/archive-title-pc.jpg);
+    background-image: url(../img/archive-title-pc.jpg);
     @include m.mq( tablet ) {
         height: 222px;
-        background-image: url(../../../img/archive-title-ipad.jpg);
+        background-image: url(../img/archive-title-ipad.jpg);
     }
     @include m.mq( sp ) {
         background-size: auto;
