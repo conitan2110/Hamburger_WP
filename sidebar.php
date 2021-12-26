@@ -1,7 +1,8 @@
 <!-- sidebar -->
 <aside class="l-grid__item3 p-sidebar">
     <h2 class="p-sidebar__logo c-text__ttl--e">Menu</h2>
-    <ul class="p-sidebar__ul">
+    <?php wp_nav_menu( array( 'menu' => 'categorymenu' ) ); ?>
+    <!-- <ul class="p-sidebar__ul">
         <li class="p-sidebar__li c-text__ttl--ja"><a href="#">バーガー</a></li>
             <ul class="p-sidebar__sub-ul">
                 <li class="p-sidebar__sub-li c-text--ja"><a href="#">ハンバーガー</a></li>
@@ -32,5 +33,5 @@
                 <li class="p-sidebar__sub-li c-text--ja"><a href="#">酒有夢</a></li>
                 <li class="p-sidebar__sub-li c-text--ja"><a href="#">No.6</a></li>
             </ul>
-    </ul>
+    </ul> -->
 </aside><!-- ここまでsidebar -->

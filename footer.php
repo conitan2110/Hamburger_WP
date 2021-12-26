@@ -1,5 +1,5 @@
-<!-- footer -->
-<footer class="l-grid__item4 p-footer">
+            <!-- footer -->
+            <footer class="l-grid__item4 p-footer">
                 <div class="p-footer__wrapper">
                     <ul class="p-footer__menu">
                         <li class="p-footer__menu-li c-text--ja">ショップ情報</li>
@@ -13,8 +13,8 @@
             <div class="c-overlay"></div>
         </div>
         <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script> -->
         <?php wp_footer(); ?>
     </body>
 </html>

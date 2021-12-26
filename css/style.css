@@ -407,47 +407,52 @@ ol, ul {
     /* 要素の持つ位置や高さは残して非表示 */
   }
 }
-.p-sidebar__li {
-  padding-top: 27px;
-  padding-bottom: 27px;
+.p-sidebar .menu-item-object-category {
+  /* p-sidebar__li */
+  font-family: "M+ Type-1 (general-j) Bold";
   font-size: 1.4583333333vw;
 }
 @media (max-width: 834px) {
-  .p-sidebar__li {
+  .p-sidebar .menu-item-object-category {
     font-size: 18.8px;
   }
 }
-.p-sidebar__li:first-child {
-  padding-top: 0;
-}
-.p-sidebar__sub-ul:last-child .p-sidebar__sub-li:last-child {
+.p-sidebar .sub-menu:last-child {
   padding-bottom: 27px;
 }
-.p-sidebar__sub-li {
+.p-sidebar .menu-item-object-post {
+  /* p-sidebar__sub-li */
   padding-left: 7%;
   padding-bottom: 16.6px;
+  font-family: "M+ Type-1 (general-j) Regular";
   font-size: 1.25vw;
 }
 @media (max-width: 834px) {
-  .p-sidebar__sub-li {
+  .p-sidebar .menu-item-object-post {
     font-size: 15.7px;
   }
 }
-.p-sidebar__sub-li:last-child {
+.p-sidebar .menu-item-object-post:first-child {
+  padding-top: 27px;
+}
+.p-sidebar .menu-item-object-post:last-child {
   padding-bottom: 6.6px;
 }
 @media (max-width: 834px) {
-  .p-sidebar__sub-li {
+  .p-sidebar .menu-item-object-post {
     padding-left: 2vw;
   }
 }
 @media (max-width: 640px) {
-  .p-sidebar__sub-li {
+  .p-sidebar .menu-item-object-post {
     padding-left: 3.5vw;
   }
 }
 .p-sidebar a {
   color: #707070;
+}
+.p-sidebar a:hover {
+  color: #3C2A10;
 }
 
 .p-footer {

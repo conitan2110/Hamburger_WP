@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="<?php language_attributes(); ?>">
     <head>
         <meta charset="UTF-8">
         <!-- <title>Hamburger</title> -->
@@ -17,10 +17,11 @@
         <!-- <link rel="stylesheet" href="css/style.css"> -->
         <!-- favicon -->
         <!-- <link rel="icon" href="img/favicon.ico"> -->
+        <?php wp_deregister_script('jquery'); ?> <!-- WP本体からのjs読込を無効化 -->
         <?php wp_head(); ?>
     </head>
 
-    <body>
+    <body <?php body_class(); ?>>
         <div class="l-grid">
             <!-- header -->
             <header class="l-grid__item1 p-header">
