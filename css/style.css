@@ -524,7 +524,7 @@ ol, ul {
   /* アイコンの位置 */
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 12px;
+  left: 8px;
 }
 .p-search-form__label {
   width: 0;
@@ -533,6 +533,8 @@ ol, ul {
 .p-search-form__input {
   padding: 3px 0 3px 2.5em;
   /* アイコンを設置するため左の余白を多めに指定 */
+  margin-left: -9px;
+  /* screen-reader-textの幅分を補正 */
   width: 72.6%;
 }
 .p-search-form__button {

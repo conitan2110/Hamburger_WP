@@ -20,7 +20,7 @@
       position: absolute;    /* 相対位置に指定 */
       top: 50%;              /* アイコンの位置 */
       transform: translateY(-50%);
-      left: 12px;
+      left: 8px;
    }
    &__label {
       width: 0;
@@ -28,6 +28,7 @@
    }
    &__input {
       padding: 3px 0 3px 2.5em; /* アイコンを設置するため左の余白を多めに指定 */
+      margin-left: -9px; /* screen-reader-textの幅分を補正 */
       width: 72.6%;
    }
    &__button {

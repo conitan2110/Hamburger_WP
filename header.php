@@ -29,7 +29,7 @@
                     <input type="search" placeholder="" class="p-search-form__input c-form__input">
                     <input type="submit" value="検索" class="p-search-form__button c-form__button">
                 </form> -->
-                <?php get_search_form( true ); ?>
+                <?php get_search_form(); ?>
                 <!-- tablet/spのメニューボタン -->
                 <h2 class="p-menu-button__open c-button">Menu</h2>
             </header><!-- ここまでheader -->
