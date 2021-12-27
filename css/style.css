@@ -452,7 +452,7 @@ ol, ul {
   color: #707070;
 }
 .p-sidebar a:hover {
-  color: #3C2A10;
+  color: #b8afa7;
 }
 
 .p-footer {
@@ -473,7 +473,7 @@ ol, ul {
 .p-footer__wrapper {
   text-align: center;
 }
-.p-footer__menu {
+.p-footer ul.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -481,18 +481,21 @@ ol, ul {
   font-size: 15.7px;
   margin-bottom: 19px;
 }
-.p-footer__menu-li {
+.p-footer li.menu-item {
   padding: 0 14px;
   border-right: 1px solid #fff;
   /* 間の枠線 */
 }
-.p-footer__menu-li:last-of-type {
+.p-footer li.menu-item:last-of-type {
   border-right: 0;
   /* 右の枠線は消す */
 }
 .p-footer__copyright {
   font-family: "M+ M Type-1 (basic latin) Regular";
   font-size: 11px;
+}
+.p-footer a {
+  color: #fff;
 }
 
 .p-search-form {
