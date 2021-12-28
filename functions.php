@@ -11,8 +11,8 @@ function custom_theme_support() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'menus' );
     register_nav_menus( array(
-        'footer_nav' => esc_html__( 'footer navigation', 'develop' ),
         'category_nav' => esc_html__( 'category navigation', 'develop' ),
+        'footer_nav' => esc_html__( 'footer navigation', 'develop' ),
     ) );
 }
 add_action( 'after_setup_theme', 'custom_theme_support' );
@@ -27,3 +27,7 @@ function readScript() {
     wp_enqueue_script( 'script', get_template_directory_uri(). '/js/script.js', 'jquery', '' , true );
 }
 add_action( 'wp_enqueue_scripts', 'readScript' );
+
+remove_filter( 'term_description', 'wpautop' );  // 説明文からpタグを除去
+
+// remove_filter('the_excerpt', 'wpautop');

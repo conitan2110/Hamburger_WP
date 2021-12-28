@@ -1,7 +1,7 @@
 <!-- sidebar -->
 <aside class="l-grid__item3 p-sidebar">
     <h2 class="p-sidebar__logo c-text__ttl--e">Menu</h2>
-    <?php wp_nav_menu( array( 'menu' => 'categorymenu' ) ); ?>
+    <?php wp_nav_menu( array( 'theme_location' => 'category_nav' ) ); ?>
     <!-- <ul class="p-sidebar__ul">
         <li class="p-sidebar__li c-text__ttl--ja"><a href="#">バーガー</a></li>
             <ul class="p-sidebar__sub-ul">

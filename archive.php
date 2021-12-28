@@ -6,7 +6,7 @@
     <div class="p-page-title c-bg">
         <div class="p-page-title__wrapper c-bg--black">
             <h2 class="p-page-title__main c-text__ttl--e">Menu:</h2>
-            <h3 class="p-page-title__sub c-text__sub-ttl--ja">チーズバーガー</h3>
+            <h3 class="p-page-title__sub c-text__sub-ttl--ja"><?php echo esc_html( single_term_title( '', false ) ) ?></h3>
         </div>
     </div><!-- ここまでpage-title -->
 
@@ -15,59 +15,17 @@
         <div class="c-container"> <!-- コンテンツ領域用 -->
             <!-- info -->
             <section class="p-info">
-                <h2 class="p-info__head c-text__ttl--ja">小見出しが入ります</h2>
+                <h2 class="p-info__head c-text__ttl--ja">
+                    <?php echo esc_html( single_term_title( '', false ) ) ?>
+                </h2>
                 <p class="p-info__text c-text--ja">
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                    <?php echo category_description(); ?>
                 </p>
             </section><!-- ここまでinfo -->
 
             <!-- menu-list -->
             <section class="p-menu-list">
                 <?php get_template_part( 'components/archive' ); ?>
-                <!-- <div class="p-menu-card c-card">
-                    <img src="img/menu-thumbnail.jpg" alt="商品サムネイル" class="p-menu-card__thumbnail c-card__thumbnail">
-                    <div class="p-menu-card__contents c-card__contents">
-                        <h2 class="p-menu-card__title c-card__title">チーズバーガー</h2>
-                        <h3 class="p-menu-card__subtitle c-card__subtitle">小見出しが入ります</h3>
-                        <p class="p-menu-card__description c-card__description">
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                        </p>
-                        <p class="p-menu-card__button c-card__button">詳しく見る</p>
-                        <a href="#" class="c-card__link"></a>
-                    </div>
-                </div>
-                <div class="p-menu-card c-card">
-                    <img src="img/menu-thumbnail.jpg" alt="商品サムネイル" class="p-menu-card__thumbnail c-card__thumbnail">
-                    <div class="p-menu-card__contents c-card__contents">
-                        <h2 class="p-menu-card__title c-card__title">ダブルチーズバーガー</h2>
-                        <h3 class="p-menu-card__subtitle c-card__subtitle">小見出しが入ります</h3>
-                        <p class="p-menu-card__description c-card__description">
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                        </p>
-                        <p class="p-menu-card__button c-card__button">詳しく見る</p>
-                        <a href="#" class="c-card__link"></a>
-                    </div>
-                </div>
-                <div class="p-menu-card c-card">
-                    <img src="img/menu-thumbnail.jpg" alt="商品サムネイル" class="p-menu-card__thumbnail c-card__thumbnail">
-                    <div class="p-menu-card__contents c-card__contents">
-                        <h2 class="p-menu-card__title c-card__title">スペシャルチーズバーガー</h2>
-                        <h3 class="p-menu-card__subtitle c-card__subtitle">小見出しが入ります</h3>
-                        <p class="p-menu-card__description c-card__description">
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                        </p>
-                        <p class="p-menu-card__button c-card__button">詳しく見る</p>
-                        <a href="#" class="c-card__link"></a>
-                    </div>
-                </div> -->
             </section><!-- ここまでmenu-list -->
         </div><!-- ここまでcontainer -->
 

@@ -1,13 +1,23 @@
-<div class="p-menu-card c-card">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/menu-thumbnail.jpg" alt="商品サムネイル" class="p-menu-card__thumbnail c-card__thumbnail">
-    <div class="p-menu-card__contents c-card__contents">
-        <h2 class="p-menu-card__title c-card__title">チーズバーガー</h2>
-        <h3 class="p-menu-card__subtitle c-card__subtitle">小見出しが入ります</h3>
-        <p class="p-menu-card__description c-card__description">
-            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-        </p>
-        <p class="p-menu-card__button c-card__button">詳しく見る</p>
-        <a href="#" class="c-card__link"></a>
-    </div>
-</div>
+<?php
+    if(have_posts()):
+        while(have_posts()): the_post(); ?>
+            <div class="p-menu-card c-card">
+                <?php
+                    if(has_post_thumbnail() ):
+                        the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "p-menu-card__thumbnail c-card__thumbnail"));
+                    else:
+                        ?><div class="p-menu-card__thumbnail c-card__thumbnail">写真がありません</div><?php
+                    endif;
+                ?>
+                <div class="p-menu-card__contents c-card__contents">
+                    <h2 class="p-menu-card__title c-card__title"><?php the_title() ?></h2>
+                    <?php the_excerpt() ?>
+                    <p class="p-menu-card__button c-card__button">詳しく見る</p>
+                    <a href="<?php the_permalink() ?>" class="c-card__link"></a>
+                </div>
+            </div><?php
+        endwhile;
+    else:
+        ?><p>お探しの商品は見つかりませんでした。</p><?php
+    endif;
+?>
