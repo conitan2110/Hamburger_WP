@@ -5,6 +5,7 @@
     color: v.$font-color--white;
     &__thumbnail {
         object-fit: cover; /* アスペクト比を維持したまま拡大縮小 */
+        background-color: v.$bgcolor--sidebar; /* サムネイルがなかった場合の背景色 */
         @include m.mq( sp ) {
             max-height: 250px;
         }

@@ -17,6 +17,9 @@ a {
 ol, ul {
   padding: 0;
   margin: 0;
+}
+
+nav ul {
   list-style: none;
 }
 
@@ -705,13 +708,21 @@ ol, ul {
     padding: 23.5px 0;
   }
 }
-.p-article h2, .p-article h3, .p-article h4, .p-article h5, .p-article h6 {
+.p-article h1, .p-article h2, .p-article h3, .p-article h4, .p-article h5, .p-article h6 {
   font-family: "M+ Type-1 (general-j) Bold";
   margin-bottom: 47px;
 }
 @media (max-width: 640px) {
-  .p-article h2, .p-article h3, .p-article h4, .p-article h5, .p-article h6 {
+  .p-article h1, .p-article h2, .p-article h3, .p-article h4, .p-article h5, .p-article h6 {
     margin-bottom: 23.5px;
+  }
+}
+.p-article h1 {
+  font-size: 34px;
+}
+@media (max-width: 640px) {
+  .p-article h1 {
+    font-size: 25px;
   }
 }
 .p-article h2 {
@@ -741,14 +752,6 @@ ol, ul {
     margin-bottom: 23.5px;
   }
 }
-.p-article p.text-right {
-  margin-left: 3%;
-  margin-bottom: 0;
-}
-.p-article p.text-left {
-  margin-right: 3%;
-  margin-bottom: 0;
-}
 .p-article a {
   text-decoration: underline;
   color: #4A6C9B;
@@ -766,40 +769,16 @@ ol, ul {
 }
 .p-article img {
   margin-bottom: 47px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (max-width: 640px) {
   .p-article img {
     margin-bottom: 23.5px;
   }
 }
-.p-article img.big {
-  max-width: 100%;
-}
-.p-article img.medium {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 43%;
-}
-@media (max-width: 834px) {
-  .p-article img.medium.center {
-    width: 80%;
-  }
-}
-.p-article img.small {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: calc(97% / 3);
-  /* 余白分を100%から引いてから画像数で割る */
-}
-@media (max-width: 834px) {
-  .p-article img.small {
-    width: calc(98.5% / 2);
-  }
-}
-@media (max-width: 640px) {
-  .p-article img.small {
-    width: 100%;
-  }
+.p-article figure img {
+  margin-bottom: 0;
 }
 .p-article div {
   margin-bottom: 47px;
@@ -809,48 +788,17 @@ ol, ul {
     margin-bottom: 23.5px;
   }
 }
-.p-article div.flex-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-.p-article div.flex-row img {
+.p-article div div, .p-article div p, .p-article div h1, .p-article div h2, .p-article div h3, .p-article div h4, .p-article div h5, .p-article div h6, .p-article div a, .p-article div ol, .p-article div ul, .p-article div img {
   margin-bottom: 0;
 }
-.p-article div.flex-wrap {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-column-gap: 1.5%;
-     -moz-column-gap: 1.5%;
-          column-gap: 1.5%;
-  row-gap: 15.7px;
-}
 .p-article ol, .p-article ul {
-  margin-bottom: 15.7px;
+  margin-bottom: 23.5px;
 }
-.p-article ol.decimal, .p-article ul.decimal {
-  list-style-type: decimal;
+.p-article ol:not(.blocks-gallery-grid), .p-article ul:not(.blocks-gallery-grid) {
+  padding-left: 1rem;
 }
-.p-article ol.first, .p-article ul.first {
-  list-style-position: inside;
-  padding-left: 39px;
-}
-@media (max-width: 640px) {
-  .p-article ol.first, .p-article ul.first {
-    padding-left: 0;
-  }
-}
-.p-article ol.second, .p-article ul.second {
-  list-style-position: inside;
-  padding-left: 55px;
-}
-@media (max-width: 640px) {
-  .p-article ol.second, .p-article ul.second {
-    padding-left: 16px;
-  }
+.p-article ol ol, .p-article ol ul, .p-article ul ol, .p-article ul ul {
+  margin-bottom: 0;
 }
 .p-article code {
   display: inline-block;
@@ -886,34 +834,18 @@ ol, ul {
   height: 60px;
   padding-left: 23.5px;
 }
-.p-article td.td_left {
-  width: 32%;
-}
-.p-article td.td_right {
-  width: 68%;
-}
-.p-article .center {
-  margin: 0 auto 47px;
-}
-@media (max-width: 640px) {
-  .p-article .center {
-    margin: 0 auto 23.5px;
-  }
-}
-.p-article__button {
-  width: 336px;
-  height: 81.5px;
-  border-radius: 1.3em;
+.p-article .wp-block-button__link {
+  color: #3C2A10;
+  text-decoration: none;
+  border: 1px solid #707070;
+  border-radius: 12px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#DED8D3), to(#F2EDE9));
   background-image: linear-gradient(0deg, #DED8D3, #F2EDE9);
   font-family: "M+ Type-1 (general-j) Bold";
-  margin-bottom: 47px;
 }
 @media (max-width: 640px) {
-  .p-article__button {
-    margin-bottom: 23.5px;
+  .p-article .wp-block-button__link {
     max-width: 100%;
-    height: 63.5px;
   }
 }
 
@@ -1208,6 +1140,8 @@ ol, ul {
   -o-object-fit: cover;
      object-fit: cover;
   /* アスペクト比を維持したまま拡大縮小 */
+  background-color: #F2EDE9;
+  /* サムネイルがなかった場合の背景色 */
 }
 @media (max-width: 640px) {
   .p-menu-card__thumbnail {

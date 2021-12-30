@@ -6,7 +6,7 @@
                     if(has_post_thumbnail() ):
                         the_post_thumbnail("large", array("alt" => get_the_title(), "class" => "p-menu-card__thumbnail c-card__thumbnail"));
                     else:
-                        ?><div class="p-menu-card__thumbnail c-card__thumbnail">写真がありません</div><?php
+                        ?><img src="<?php echo get_template_directory_uri() ?>/img/no-image.png" class="p-menu-card__thumbnail c-card__thumbnail"><?php
                     endif;
                 ?>
                 <div class="p-menu-card__contents c-card__contents">
