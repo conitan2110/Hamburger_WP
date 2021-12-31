@@ -34,20 +34,7 @@
 
         <!-- pagination -->
         <div class="c-pagination">
-            <p class="c-pagination__page-count">page 1/10</p>
-            <ul class="c-pagination__ul">
-                <li class="c-pagination__li">≪</li>
-                <li class="c-pagination__li">1</li>
-                <li class="c-pagination__li">2</li>
-                <li class="c-pagination__li">3</li>
-                <li class="c-pagination__li">4</li>
-                <li class="c-pagination__li">5</li>
-                <li class="c-pagination__li">6</li>
-                <li class="c-pagination__li">7</li>
-                <li class="c-pagination__li">8</li>
-                <li class="c-pagination__li">9</li>
-                <li class="c-pagination__li">≫</li>
-            </ul>
+            <?php wp_pagenavi(); ?>
         </div><!-- ここまでpagination -->
     </div>
 </article><!-- ここまでcontents -->

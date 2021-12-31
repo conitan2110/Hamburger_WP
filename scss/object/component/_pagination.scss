@@ -2,52 +2,71 @@
 @use "../../foundation/mixin" as m;
 
 .c-pagination {
-    margin: 50px 0;
     font-size: 12.5px;
     color: v.$font-color--gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include m.mq( tablet ) {
-        margin: 23.5px 0;
-    }
-    &__page-count {
-        font-family: v.$font-Roboto-Bold;
-        margin-right: 8px;
-        @include m.mq( sp ) {
-            display: none;
-        }
-    }
-    &__ul {
+    .wp-pagenavi {
+        width: 87%;
+        margin: 50px auto;
         display: flex;
-    }
-    &__li {
-        font-family: v.$font-Roboto-Bold;
-        margin: 0 7px;
-        padding: 4px 10px;
-        border: 1px solid v.$font-color--gray;
-        &:first-child, &:last-child {
-            border: none;
-            margin: 0;
+        justify-content: center;
+        align-items: center;
+        @include m.mq( tablet ) {
+            width: 90%;
+            margin: 23.5px auto;
         }
-        &:nth-child(2) {
+        @include m.mq( sp ) {
+            justify-content: space-between;
+        }
+        a,span {
+            display: inline-block;
+            font-family: v.$font-Roboto-Bold;
+        }
+        a {
+            color: v.$font-color--gray;
+        }
+        .pages { /* 総ページ表記 */
+            margin-right: 14px;
+            @include m.mq( sp ) {
+                display: none;
+            }
+        }
+        .current,
+        a.page { /* ページボタン */
+            margin: 0 7px;
+            padding: 0 10px;
+            border: 1px solid v.$font-color--gray;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            @include m.mq( sp ) {
+                display: none;
+            }
+            &:hover { /* ボタンをホバーしたとき */
+                color: v.$font-color--white;
+                background-color: v.$bgcolor--card;
+            }
+        }
+        .current { /* 現在のページ */
             color: v.$font-color--white;
             background-color: v.$bgcolor--card;
         }
-        @include m.mq( sp ) {
-            margin: 0 5px;
-            &:not(:first-child):not(:last-child) { /* 最初と最後以外は隠す */
-                visibility: hidden;
+        .previouspostslink { /* 前へ */
+            margin-right: 7px;
+            @include m.mq( sp ) {
+                &::after {
+                    content: " 前へ";
+                    font-family: v.$font-Mplus-j-Regular;
+                }
             }
-            &:first-child::after {
-                content: " 前へ";
-                font-family: v.$font-Mplus-j-Regular;
-                white-space: nowrap;
-            }
-            &:last-child::before {
-                content: "次へ ";
-                font-family: v.$font-Mplus-j-Regular;
-                white-space: nowrap;
+        }
+        .nextpostslink { /* 次へ */
+            margin-left: 7px;
+            @include m.mq( sp ) {
+                &::before {
+                    content: "次へ ";
+                    font-family: v.$font-Mplus-j-Regular;
+                }
             }
         }
     }

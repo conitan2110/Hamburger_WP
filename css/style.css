@@ -272,9 +272,12 @@ nav ul {
 }
 
 .c-pagination {
-  margin: 50px 0;
   font-size: 12.5px;
   color: #707070;
+}
+.c-pagination .wp-pagenavi {
+  width: 87%;
+  margin: 50px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,55 +289,80 @@ nav ul {
           align-items: center;
 }
 @media (max-width: 834px) {
-  .c-pagination {
-    margin: 23.5px 0;
+  .c-pagination .wp-pagenavi {
+    width: 90%;
+    margin: 23.5px auto;
   }
 }
-.c-pagination__page-count {
+@media (max-width: 640px) {
+  .c-pagination .wp-pagenavi {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.c-pagination .wp-pagenavi a, .c-pagination .wp-pagenavi span {
+  display: inline-block;
   font-family: "Roboto";
-  margin-right: 8px;
+}
+.c-pagination .wp-pagenavi a {
+  color: #707070;
+}
+.c-pagination .wp-pagenavi .pages {
+  /* 総ページ表記 */
+  margin-right: 14px;
 }
 @media (max-width: 640px) {
-  .c-pagination__page-count {
+  .c-pagination .wp-pagenavi .pages {
     display: none;
   }
 }
-.c-pagination__ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.c-pagination__li {
-  font-family: "Roboto";
+.c-pagination .wp-pagenavi .current,
+.c-pagination .wp-pagenavi a.page {
+  /* ページボタン */
   margin: 0 7px;
-  padding: 4px 10px;
+  padding: 0 10px;
   border: 1px solid #707070;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
 }
-.c-pagination__li:first-child, .c-pagination__li:last-child {
-  border: none;
-  margin: 0;
+@media (max-width: 640px) {
+  .c-pagination .wp-pagenavi .current,
+.c-pagination .wp-pagenavi a.page {
+    display: none;
+  }
 }
-.c-pagination__li:nth-child(2) {
+.c-pagination .wp-pagenavi .current:hover,
+.c-pagination .wp-pagenavi a.page:hover {
+  /* ボタンをホバーしたとき */
   color: #fff;
   background-color: #3C2B1C;
 }
+.c-pagination .wp-pagenavi .current {
+  /* 現在のページ */
+  color: #fff;
+  background-color: #3C2B1C;
+}
+.c-pagination .wp-pagenavi .previouspostslink {
+  /* 前へ */
+  margin-right: 7px;
+}
 @media (max-width: 640px) {
-  .c-pagination__li {
-    margin: 0 5px;
-  }
-  .c-pagination__li:not(:first-child):not(:last-child) {
-    /* 最初と最後以外は隠す */
-    visibility: hidden;
-  }
-  .c-pagination__li:first-child::after {
+  .c-pagination .wp-pagenavi .previouspostslink::after {
     content: " 前へ";
     font-family: "M+ Type-1 (general-j) Regular";
-    white-space: nowrap;
   }
-  .c-pagination__li:last-child::before {
+}
+.c-pagination .wp-pagenavi .nextpostslink {
+  /* 次へ */
+  margin-left: 7px;
+}
+@media (max-width: 640px) {
+  .c-pagination .wp-pagenavi .nextpostslink::before {
     content: "次へ ";
     font-family: "M+ Type-1 (general-j) Regular";
-    white-space: nowrap;
   }
 }
 
