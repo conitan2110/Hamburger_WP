@@ -5,17 +5,17 @@
    width: 100%;
    background-image: url(../img/map.jpg);
    background-position: 0 50%;
-   &__map-layer { // mapを覆う透過の黒
+   &__map-layer { /* mapを覆う透過の黒 */
       background-color: rgba(0,0,0,0.4);
-      position: relative;  // bg-layer の基準位置
+      position: relative;  /* bg-layer の基準位置 */
    }
-   &__contents-area { // コンテンツ領域を確保
+   &__contents-area { /* コンテンツ領域を確保 */
       width: 60%;
       @include m.mq( tablet ) {
          width: 100%;
       }
    }
-   &__bg-layer { // テキスト領域と無関係の黒背景
+   &__bg-layer { /* テキスト領域と無関係の黒背景 */
       width: 60%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.29);
@@ -32,7 +32,7 @@
    }
    &__wrapper {
       position: relative;
-      z-index: 100;  // テキストが一番上のレイヤー
+      z-index: 100;  /* テキストが一番上のレイヤー */
       width: 73%;
       padding-top: 65px;
       padding-bottom: 52.5px;

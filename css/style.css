@@ -24,6 +24,8 @@ nav ul {
 }
 
 .l-grid {
+  min-height: 100vh;
+  /* コンテンツ高さの最小値＝ブラウザの高さ（フッター下の余白回避） */
   display: grid;
   grid-template-rows: 170px 1fr 118px;
   grid-template-columns: 1fr 19%;
@@ -1017,10 +1019,13 @@ nav ul {
   background-position: 0 50%;
 }
 .p-access__map-layer {
+  /* mapを覆う透過の黒 */
   background-color: rgba(0, 0, 0, 0.4);
   position: relative;
+  /* bg-layer の基準位置 */
 }
 .p-access__contents-area {
+  /* コンテンツ領域を確保 */
   width: 60%;
 }
 @media (max-width: 834px) {
@@ -1029,6 +1034,7 @@ nav ul {
   }
 }
 .p-access__bg-layer {
+  /* テキスト領域と無関係の黒背景 */
   width: 60%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.29);
@@ -1050,6 +1056,7 @@ nav ul {
 .p-access__wrapper {
   position: relative;
   z-index: 100;
+  /* テキストが一番上のレイヤー */
   width: 73%;
   padding-top: 65px;
   padding-bottom: 52.5px;

@@ -15,7 +15,6 @@
     }
     &__thumbnail {
         width: 50%;
-        // border: 1px solid v.$font-color--gray;
         @include m.mq( sp ) {
             width: 100%;
         }

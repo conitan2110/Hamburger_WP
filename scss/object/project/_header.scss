@@ -15,7 +15,6 @@
         position: relative;
     }
     &__logo {
-        // font-size: 50px;
         @include m.font-size(32, pc);
         line-height: 1.325;
         margin-left: 4.18%;

@@ -1,6 +1,7 @@
 @use "../foundation/mixin" as m;
 
 .l-grid {
+    min-height: 100vh; /* コンテンツ高さの最小値＝ブラウザの高さ（フッター下の余白回避） */
     display: grid;
     grid-template-rows: 170px 1fr 118px;
     grid-template-columns: 1fr 19%;
