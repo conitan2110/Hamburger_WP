@@ -296,13 +296,6 @@ nav ul {
     margin: 23.5px auto;
   }
 }
-@media (max-width: 640px) {
-  .c-pagination .wp-pagenavi {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
 .c-pagination .wp-pagenavi a, .c-pagination .wp-pagenavi span {
   display: inline-block;
   font-family: "Roboto";
@@ -352,6 +345,9 @@ nav ul {
   margin-right: 7px;
 }
 @media (max-width: 640px) {
+  .c-pagination .wp-pagenavi .previouspostslink {
+    margin-right: auto;
+  }
   .c-pagination .wp-pagenavi .previouspostslink::after {
     content: " 前へ";
     font-family: "M+ Type-1 (general-j) Regular";
@@ -362,6 +358,9 @@ nav ul {
   margin-left: 7px;
 }
 @media (max-width: 640px) {
+  .c-pagination .wp-pagenavi .nextpostslink {
+    margin-left: auto;
+  }
   .c-pagination .wp-pagenavi .nextpostslink::before {
     content: "次へ ";
     font-family: "M+ Type-1 (general-j) Regular";

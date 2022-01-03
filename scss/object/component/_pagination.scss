@@ -14,9 +14,6 @@
             width: 90%;
             margin: 23.5px auto;
         }
-        @include m.mq( sp ) {
-            justify-content: space-between;
-        }
         a,span {
             display: inline-block;
             font-family: v.$font-Roboto-Bold;
@@ -54,6 +51,7 @@
         .previouspostslink { /* 前へ */
             margin-right: 7px;
             @include m.mq( sp ) {
+                margin-right: auto;
                 &::after {
                     content: " 前へ";
                     font-family: v.$font-Mplus-j-Regular;
@@ -63,6 +61,7 @@
         .nextpostslink { /* 次へ */
             margin-left: 7px;
             @include m.mq( sp ) {
+                margin-left: auto;
                 &::before {
                     content: "次へ ";
                     font-family: v.$font-Mplus-j-Regular;
